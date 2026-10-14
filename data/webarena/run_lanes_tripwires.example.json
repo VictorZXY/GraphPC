@@ -1,0 +1,52 @@
+[
+ {
+  "name": "402",
+  "action": "freeze",
+  "regex": "Insufficient Balance|Error code: 402|HTTP/1\\.1 402"
+ },
+ {
+  "name": "length",
+  "action": "alert",
+  "regex": "deepseek usage: .* finish=length "
+ },
+ {
+  "name": "reasoning_zero",
+  "action": "alert",
+  "regex": "deepseek usage: call=\\d+ input=\\d+ output=\\d+ \\(reasoning=0\\) route=(control|deciding) "
+ },
+ {
+  "name": "model",
+  "action": "alert",
+  "regex": "deepseek usage: .* model=(?!deepseek-flash )\\S+ "
+ },
+ {
+  "name": "effort",
+  "action": "alert",
+  "regex": "deepseek usage: .* thinking_sent=enabled effort_sent=(?!high )\\S+ "
+ },
+ {
+  "name": "fingerprint",
+  "action": "change",
+  "regex": "deepseek usage: .* fingerprint=(\\S+) ts="
+ },
+ {
+  "name": "failed_call",
+  "action": "alert",
+  "regex": "DeepSeekCallError|DeepSeekBaselineCallError"
+ },
+ {
+  "name": "unrecorded_call",
+  "action": "alert",
+  "regex": "deepseek usage line skipped"
+ },
+ {
+  "name": "rate_limit",
+  "action": "alert",
+  "regex": "RateLimitError|Error code: 429"
+ },
+ {
+  "name": "connection_closed",
+  "action": "alert",
+  "regex": "APIConnectionError|RemoteProtocolError|Server disconnected"
+ }
+]

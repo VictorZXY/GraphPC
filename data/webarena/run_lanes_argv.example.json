@@ -1,0 +1,32 @@
+{
+ "control": [
+  "--model",
+  "deepseek-flash",
+  "--reasoning_effort",
+  "high",
+  "--max_tokens",
+  "65536",
+  "--max_steps",
+  "30",
+  "--parsing_failure_th",
+  "999",
+  "--repeating_action_failure_th",
+  "999",
+  "--env_chunk_size",
+  "15",
+  "--log_level",
+  "INFO"
+ ],
+ "graphpc": [
+  "--backbone",
+  "deepseek",
+  "--model",
+  "deepseek-flash",
+  "--max_steps",
+  "30",
+  "--env_chunk_size",
+  "15",
+  "--log_level",
+  "INFO"
+ ]
+}

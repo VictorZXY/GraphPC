@@ -1,0 +1,596 @@
+{
+ "subset_n": 28,
+ "subset_ids": [
+  "001",
+  "007",
+  "008",
+  "010",
+  "034",
+  "035",
+  "038",
+  "042",
+  "043",
+  "044",
+  "046",
+  "048",
+  "053",
+  "057",
+  "064",
+  "066",
+  "067",
+  "068",
+  "079",
+  "084",
+  "087",
+  "090",
+  "092",
+  "102",
+  "103",
+  "104",
+  "107",
+  "108"
+ ],
+ "twin_pairs": [
+  [
+   "035",
+   "038"
+  ],
+  [
+   "042",
+   "044"
+  ],
+  [
+   "044",
+   "053"
+  ],
+  [
+   "048",
+   "068"
+  ],
+  [
+   "066",
+   "079"
+  ],
+  [
+   "066",
+   "087"
+  ],
+  [
+   "087",
+   "090"
+  ],
+  [
+   "103",
+   "104"
+  ],
+  [
+   "107",
+   "108"
+  ]
+ ],
+ "run_order": [
+  "035",
+  "042",
+  "053",
+  "048",
+  "066",
+  "090",
+  "103",
+  "107",
+  "001",
+  "007",
+  "008",
+  "010",
+  "034",
+  "043",
+  "046",
+  "057",
+  "064",
+  "067",
+  "084",
+  "092",
+  "038",
+  "102",
+  "044",
+  "068",
+  "079",
+  "087",
+  "104",
+  "108"
+ ],
+ "run_order_min_gap": 20,
+ "run_order_pair_gaps": {
+  "035-038": 20,
+  "042-044": 21,
+  "044-053": 20,
+  "048-068": 20,
+  "066-079": 20,
+  "066-087": 21,
+  "087-090": 20,
+  "103-104": 20,
+  "107-108": 20
+ },
+ "instance_type_overrides": {
+  "048": "t3.large",
+  "053": "t3.xlarge",
+  "057": "t3.xlarge",
+  "064": "t3.xlarge",
+  "107": "t3.xlarge",
+  "108": "t3.xlarge"
+ },
+ "volume_size_overrides": {
+  "048": 64,
+  "057": 80,
+  "064": 50,
+  "107": 80,
+  "108": 80
+ },
+ "checkpoint_unsafe": [
+  "034",
+  "035",
+  "053",
+  "067",
+  "079",
+  "092",
+  "104"
+ ],
+ "hitl": [
+  "007",
+  "034"
+ ],
+ "method_surface": {
+  "max_trajectory_length": null,
+  "history_intended_actions_cap": 1,
+  "deciding_request": "timeline",
+  "timeline_text_limits": {
+   "reasoning_text": 1500,
+   "out_of_window_line": 200,
+   "executed_text": 300,
+   "fact_entry": 300,
+   "fact_source": 100,
+   "facts_render": [
+    32000,
+    16000,
+    16000
+   ]
+  },
+  "max_steps": 500
+ },
+ "method_surface_qwen": {
+  "backbone_type": "qwen",
+  "model": "qwen/qwen3.7-plus",
+  "max_trajectory_length": null,
+  "history_intended_actions_cap": 1,
+  "deciding_request": "timeline",
+  "timeline_text_limits": {
+   "reasoning_text": 1500,
+   "out_of_window_line": 200,
+   "executed_text": 300,
+   "fact_entry": 300,
+   "fact_source": 100,
+   "facts_render": [
+    32000,
+    16000,
+    16000
+   ]
+  },
+  "retained_images": {
+   "image_max": 20,
+   "fold_size": 10,
+   "opening_frame_kept": false
+  },
+  "typing_note": "",
+  "max_tokens": 32768,
+  "request_timeout_s": 900.0,
+  "unusable_deciding_reply": "repaired",
+  "model_call_attempts": 3,
+  "max_actions": 1,
+  "max_steps": 800,
+  "two_pass": false,
+  "enable_completion_gate": true,
+  "completion_gate_window": 3,
+  "completion_gate_rules": [
+   "fail_rests_on_step_budget",
+   "named_app_bypassed_by_command_line",
+   "synthetic_media_deliverable",
+   "unverified_barrier",
+   "use_file_claimed_done"
+  ],
+  "grounding_class_check": {
+   "families": {
+    "left_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "right_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "double_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "triple_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "middle_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "left_click_drag": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "left_mouse_down": [
+     "left_mouse_down"
+    ],
+    "left_mouse_up": [
+     "left_mouse_up"
+    ],
+    "mouse_move": [
+     "mouse_move"
+    ],
+    "scroll": [
+     "scroll"
+    ],
+    "hscroll": [
+     "hscroll"
+    ]
+   },
+   "always_rejected": [
+    "screenshot",
+    "wait"
+   ],
+   "repair_text": "{decided} was decided but the reply is {got}; reply with a {decided}",
+   "exhaustion_line": "the decided {decided} was not executed: the last of {n} grounding replies was {got}",
+   "composite_classes": [
+    "hscroll",
+    "left_click_drag",
+    "scroll"
+   ]
+  },
+  "stuck_stop": {
+   "repeat": {
+    "K": 50,
+    "window": 55,
+    "max_changed": 11
+   },
+   "wait": {
+    "run": 50,
+    "max_changed": 10
+   },
+   "diff_floor_px": 64,
+   "min_step": 500,
+   "transparent": [
+    "decided_wait",
+    "grounding_class_mismatch"
+   ]
+  }
+ },
+ "method_surface_deepseek": {
+  "backbone_type": "deepseek",
+  "model": "deepseek-flash",
+  "max_trajectory_length": null,
+  "history_intended_actions_cap": 1,
+  "deciding_request": "timeline",
+  "timeline_text_limits": {
+   "reasoning_text": 1500,
+   "out_of_window_line": 200,
+   "executed_text": 300,
+   "fact_entry": 300,
+   "fact_source": 100,
+   "facts_render": [
+    32000,
+    16000,
+    16000
+   ]
+  },
+  "retained_images": {
+   "budget": 10,
+   "truncation_threshold": 20
+  },
+  "typing_note": "Environment note: a `type` action is carried out as simulated keystrokes at about 0.1 s per character; the step's time limit of about 90 s does not cut it short — when a step returns before its typing has finished, the remaining keystrokes continue on their own, so a long text can still be being typed when the next screen is captured.",
+  "request_timeout_s": 500.0,
+  "model_call_attempts": 3,
+  "max_actions": 1,
+  "max_steps": 500,
+  "two_pass": false,
+  "enable_completion_gate": true,
+  "completion_gate_window": 3,
+  "completion_gate_rules": [
+   "fail_rests_on_step_budget",
+   "named_app_bypassed_by_command_line",
+   "requirements_unverified",
+   "synthetic_media_deliverable",
+   "unverified_barrier",
+   "use_file_claimed_done"
+  ],
+  "grounding_class_check": {
+   "families": {
+    "left_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "right_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "middle_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "double_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "triple_click": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "mouse_move": [
+     "mouse_move"
+    ],
+    "left_click_drag": [
+     "double_click",
+     "left_click",
+     "left_click_drag",
+     "middle_click",
+     "right_click",
+     "triple_click"
+    ],
+    "scroll": [
+     "scroll"
+    ],
+    "hold_key": [
+     "hold_key"
+    ],
+    "left_mouse_down": [
+     "left_mouse_down"
+    ],
+    "left_mouse_up": [
+     "left_mouse_up"
+    ]
+   },
+   "always_rejected": [
+    "screenshot",
+    "wait"
+   ],
+   "repair_text": "{decided} was decided but the reply is {got}; reply with a {decided}",
+   "exhaustion_line": "the decided {decided} was not executed: the last of {n} grounding replies was {got}",
+   "composite_classes": []
+  },
+  "grounding_action_from_function_name": {
+   "names": [
+    "key",
+    "type",
+    "mouse_move",
+    "left_click",
+    "right_click",
+    "middle_click",
+    "double_click",
+    "triple_click",
+    "left_click_drag",
+    "scroll",
+    "wait",
+    "screenshot",
+    "hold_key",
+    "left_mouse_down",
+    "left_mouse_up"
+   ],
+   "rule": "a grounding call named after one of these actions, with no `action` argument, is the `computer` call with that action; the terminal-name and class-family rules then apply to it"
+  },
+  "grounding_coordinate_strip": {
+   "fields": [
+    "target",
+    "intent",
+    "value"
+   ],
+   "patterns": [
+    "(?i)(?:['\"](?:start_)?coordinates?['\"]\\s*:\\s*\\[\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*\\]|['\"]x['\"]\\s*:\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*['\"]y['\"]\\s*:\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d))\\s*,\\s*|\\s*,\\s*(?:['\"](?:start_)?coordinates?['\"]\\s*:\\s*\\[\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*\\]|['\"]x['\"]\\s*:\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*['\"]y['\"]\\s*:\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d))(?=\\s*[}\\]])|(?:['\"](?:start_)?coordinates?['\"]\\s*:\\s*\\[\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*\\]|['\"]x['\"]\\s*:\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*['\"]y['\"]\\s*:\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d))",
+    "(?i)(?:\\s+(?:at|around|near|to))?(?:\\s+(?:approximate|approximately|approx\\.?|about|roughly))?(?:\\s+coordinates?)?\\s*\\(\\s*(?:(?:(?:\\b(?:px|pixels?|screen|normali[sz]ed|norm)(?![A-Za-z])|(?:[~≈]|\\bapprox\\.?(?![A-Za-z])))\\s*)+(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))(?:\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z]))?|(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z]))(?:\\s*[,;≈=→]?\\s*(?:(?:(?:\\b(?:px|pixels?|screen|normali[sz]ed|norm)(?![A-Za-z])|(?:[~≈]|\\bapprox\\.?(?![A-Za-z])))\\s*)+(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))(?:\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z]))?|(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z])))*(?:\\s*[≈=→]\\s*(?:(?:\\b(?:px|pixels?|screen|normali[sz]ed|norm)(?![A-Za-z])|(?:[~≈]|\\bapprox\\.?(?![A-Za-z])))\\s*)+)?\\s*\\)",
+    "(?i),?(?:\\s+(?:at|around|near|to))?(?:\\s+(?:approximate|approximately|approx\\.?|about|roughly))?(?:\\s+coordinates?)?\\s*(?:(?:(?:[~≈]|\\bapprox\\.?(?![A-Za-z]))\\s*)*\\b(?:px|pixels?|screen|normali[sz]ed|norm)(?![A-Za-z])\\s*(?:(?:\\b(?:px|pixels?|screen|normali[sz]ed|norm)(?![A-Za-z])|(?:[~≈]|\\bapprox\\.?(?![A-Za-z])))\\s*)*(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))(?:\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z]))?|(?:(?:\\b(?:px|pixels?|screen|normali[sz]ed|norm)(?![A-Za-z])|(?:[~≈]|\\bapprox\\.?(?![A-Za-z])))\\s*)*(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z]))(?:\\s*[,;≈=→]?\\s*(?:(?:(?:\\b(?:px|pixels?|screen|normali[sz]ed|norm)(?![A-Za-z])|(?:[~≈]|\\bapprox\\.?(?![A-Za-z])))\\s*)+(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))(?:\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z]))?|(?:\\(\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\)|\\[\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*\\]|(?<![\\d.])\\d{2,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{2,4}(?!\\.?\\d))\\s*(?:px|pixels?|normali[sz]ed|norm)(?![A-Za-z])))*",
+    "(?:\\s+(?:at|around|near|to))?(?:\\s+(?:approximate|approximately|approx\\.?|about|roughly))?(?:\\s+coordinates?)?\\s*[\\(\\[]\\s*[~≈]?\\s*\\d{1,4}(?!\\.\\d)\\s*,\\s*[~≈]?\\s*\\d{1,4}(?!\\.\\d)\\s*[\\)\\]]",
+    "(?:\\s+(?:at|around|near|to))?(?:\\s+(?:approximate|approximately|approx\\.?|about|roughly))?(?:\\s+coordinates?)?\\s*\\(?\\s*x\\s*[=≈~:]\\s*[~≈]?\\s*\\d{1,4}(?!\\.\\d)\\s*,?\\s*(?:and\\s+)?y\\s*[=≈~:]\\s*[~≈]?\\s*\\d{1,4}(?!\\.\\d)\\s*\\)?",
+    "(?:\\s+(?:at|around|near|to))?(?:\\s+(?:approximate|approximately|approx\\.?|about|roughly))?(?:\\s+coordinates?)?\\s*\\b[xy]\\s*[=≈~]\\s*[~≈]?\\s*\\d{1,4}(?!\\.\\d)(?:\\s*[-–]\\s*\\d{1,4}(?!\\.\\d))?\\b"
+   ],
+   "value_point_pattern": "^\\s*[\\[\\(]?\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)(?:\\s*,\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d)\\s*,\\s*(?<![\\d.])\\d{1,4}(?!\\.?\\d))?\\s*[\\]\\)]?\\s*$",
+   "marked_pair_fields": [
+    "target",
+    "intent"
+   ],
+   "marked_pair_patterns": [
+    "(?i),?\\s*(?:(?:[≈~]|\\babout\\b|\\bapprox(?:imately\\b|\\.|\\b)|\\baround\\b|\\bnear\\b|\\bat\\b|\\bclick\\b|\\bpoint\\b|\\bcoordinates?\\b|\\bpixels?\\b|\\bpx\\b|\\bimage\\b|\\bscreen\\b|\\b[xy]\\s*=)\\s*[:=]?\\s*)+(?:[\\(\\[]\\s*[~≈]?\\s*(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d)(?:\\s*[–-]\\s*(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d))?(?!\\s*[–-]\\s*\\d)\\s*,\\s*[~≈]?\\s*(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d)(?:\\s*[–-]\\s*(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d))?(?!\\s*[–-]\\s*\\d)\\s*[\\)\\]]|(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d)(?:\\s*[–-]\\s*(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d))?(?!\\s*[–-]\\s*\\d)\\s*,\\s*(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d)(?:\\s*[–-]\\s*(?<![\\w.:/])[1-9]\\d{1,3}(?![\\w:/]|\\.\\d))?(?!\\s*[–-]\\s*\\d)(?!\\s*,\\s*\\d))"
+   ],
+   "emptied_field": "dropped; an emptied target or intent keeps its text when neither would otherwise remain"
+  },
+  "grounding_arguments_repair": {
+   "rule": "when the arguments of a grounding tool call are not JSON, the closing brackets and braces that close no opener (none open, or the innermost open one is of the other kind; string literals skipped) are removed when every one of them stands in the trailing run of closers, and the text is parsed again; only a JSON object is taken, and it meets every rule a reply meets; nothing else is repaired"
+  },
+  "grounding_click_text_rule": {
+   "modifiers": [
+    "alt",
+    "cmd",
+    "command",
+    "control",
+    "ctrl",
+    "meta",
+    "shift",
+    "super",
+    "win"
+   ],
+   "line_classes": [
+    "left_click",
+    "right_click",
+    "middle_click",
+    "double_click",
+    "triple_click",
+    "mouse_move",
+    "left_click_drag",
+    "scroll",
+    "left_mouse_down",
+    "left_mouse_up"
+   ],
+   "reply_classes": [
+    "left_click",
+    "right_click",
+    "middle_click",
+    "double_click",
+    "triple_click",
+    "left_mouse_down",
+    "left_mouse_up",
+    "scroll"
+   ],
+   "rule": "a `text` is kept only when every `+`-separated token, stripped and lower-cased, is one of the modifiers; otherwise it is dropped and the action kept: from the grounding line on the line classes, from an accepted reply on the reply classes"
+  },
+  "grounding_reply_unusable_line": "the decided {decided} was not executed: none of the {n} grounding replies was a usable tool call (a fault in the grounding model's output, not in your decision)",
+  "grounded_program_check": {
+   "prefix": "import pyautogui; import time; import platform; pyautogui.FAILSAFE = False; _osworld_shift_chars = '~!@#$%^&*()_+' + chr(123) + chr(125) + '|:\"<>?'; _osworld_linux_shift_chars = '~!@#$%^&*()_+' + chr(123) + chr(125) + '|:\">?'; pyautogui.isShiftCharacter = lambda character: character.isupper() or character in (_osworld_linux_shift_chars if platform.system() == 'Linux' else _osworld_shift_chars); {command}",
+   "verbs": [
+    "click",
+    "doubleClick",
+    "dragTo",
+    "hscroll",
+    "keyDown",
+    "keyUp",
+    "middleClick",
+    "mouseDown",
+    "mouseUp",
+    "moveTo",
+    "press",
+    "rightClick",
+    "scroll",
+    "sleep",
+    "tripleClick"
+   ],
+   "passed_through": [
+    "DONE",
+    "FAIL",
+    "WAIT"
+   ],
+   "rule": "the translated command, after the controller's prefix, must compile, and each statement of the command must be a call of one of these pyautogui verbs with literal arguments, or left_press's `import time as _t; _t.sleep(1)`; otherwise it is the translator's ValueError, a counted WAIT (action_parse_error), never executed"
+  },
+  "requirement_ledger": {
+   "instruction": "REQUIREMENTS: keep a requirement ledger in `requirements`, rewritten in full at every step as `graph_summary` is, and shown back to you under STATE. At the first step, list every requirement the task instruction states: each deliverable, its path or name, its format, its values, the application it must be made with, and each constraint. Add the requirements you find later in briefs, reference or example files and on screen when you read them, including the formats an example shows. One item per requirement, at most 20 items, each with `id` (a short name kept for the whole task), `requirement` (at most 200 characters), `status` (`open`, `verified` or `unmet`), `evidence_step`, `evidence` (at most 200 characters) and `reason`. A requirement is `verified` only by an observation, made after the last change that could affect it, of the deliverable as its consumer reads it: reopen it in the application it is meant for, or read the saved file back and compare it with the requirement; record that step as `evidence_step` and what it showed as `evidence`. That an action had its predicted effect is not verification. `evidence_step` is the number k of an executed step after which the screen showed the evidence, the \"Screen after step k\" you read it on; under STATE BEFORE STEP P, the CURRENT SCREEN is the screen after step P-1. When you change something, set the requirements it can affect back to `open`. A requirement you have found cannot be met is `unmet`, with `reason` saying why and `evidence_step` the step whose screen showed it. Keep every id you have listed: an id missing from the ledger counts as open, and so does an item whose `evidence_step` is before the step at which you last listed it as open. `done` is accepted only when every requirement is `verified` or `unmet`. `facts` keeps the values you read, verbatim; the ledger says what the result must satisfy.",
+   "schema": {
+    "type": "array",
+    "maxItems": 20,
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "id",
+      "requirement",
+      "status",
+      "evidence_step",
+      "evidence",
+      "reason"
+     ],
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "requirement": {
+       "type": "string",
+       "maxLength": 200
+      },
+      "status": {
+       "type": "string",
+       "enum": [
+        "open",
+        "verified",
+        "unmet"
+       ]
+      },
+      "evidence_step": {
+       "type": [
+        "integer",
+        "null"
+       ]
+      },
+      "evidence": {
+       "type": "string",
+       "maxLength": 200
+      },
+      "reason": {
+       "type": "string",
+       "maxLength": 200
+      }
+     }
+    }
+   },
+   "render_items": 20,
+   "text_limit": 200,
+   "rule": "requirements_unverified",
+   "strikes": 2,
+   "block_line": {
+    "missing": "(the reply carries no requirement ledger)",
+    "empty": "(the requirement ledger is empty)",
+    "problems": {
+     "malformed": "not a well-formed item (an id and a status of open, verified or unmet)",
+     "open": "open",
+     "dropped": "dropped from the ledger",
+     "no_reason": "unmet without a reason",
+     "no_evidence_step": "it has no evidence_step",
+     "evidence_step": "its evidence_step {step} is not an executed step before this one",
+     "stale_evidence": "its evidence_step {step} is before step {last_open}, where you last listed it as open"
+    },
+    "named_items": 5,
+    "text_limit": 60
+   }
+  },
+  "step_budget_line": "For your reference, you have maximum of {max_steps} steps, and current step is {step} out of {max_steps}."
+ },
+ "relevance_threshold_percentile": 74.5,
+ "relevance_threshold_resolved": 0.35,
+ "relevance_threshold_tolerance": 0.005,
+ "relevance_threshold_population_size": 756,
+ "relevance_threshold_corpus_digest": "sha256:b6d77ae03254d92ed2f8c49de42bcb1324d2a4aeba01a4e86867cb87f1d01595",
+ "relevance_threshold_corpus_digest_excluded_ids": [
+  "057"
+ ]
+}

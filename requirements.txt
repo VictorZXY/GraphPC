@@ -1,0 +1,17 @@
+# Model SDKs
+anthropic>=0.75,<1
+httpx
+openai>=2,<3
+Pillow
+pydantic
+
+# Retrieval (sentence embeddings)
+numpy
+sentence-transformers>=2.7,<6
+tokenizers
+torch
+transformers>=4.51,<6
+
+# Utilities
+python-dotenv
+requests
