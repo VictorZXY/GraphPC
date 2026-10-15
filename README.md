@@ -65,16 +65,16 @@ by retrieval-on runs) and, for the embedder on GPU, a `torch` build that matches
 Both benchmarks run against remote hosts that must be set up and configured before any run:
 
 - WebArena (self-hosted sites on one EC2 instance, driven from a local driver machine):
-  `.claude/docs/benchmarks/webarena.md`
+  [`.claude/docs/benchmarks/webarena.md`](.claude/docs/benchmarks/webarena.md)
 - OSWorld 2.0 (a run host holding an OSWorld-V2 checkout, which provisions one EC2 VM per task):
-  `.claude/docs/benchmarks/osworld_v2.md`
+  [`.claude/docs/benchmarks/osworld_v2.md`](.claude/docs/benchmarks/osworld_v2.md)
 
 You can also follow the official environment setup instructions of [WebArena](https://github.com/web-arena-x/webarena)
 and [OSWorld 2.0](https://github.com/xlang-ai/OSWorld-V2).
 
 Benchmark launches run in their own environments: on WebArena the `WebArena` conda environment, which installs this
-`requirements.txt` over WebArena's own; on OSWorld 2.0 the run host's `uv` environment inside the OSWorld-V2 checkout.
-The experiment protocol (same-model paired arms, run order, verdict method) is in `.claude/docs/experiments.md`.
+[`requirements.txt`](requirements.txt) over WebArena's own; on OSWorld 2.0 the run host's `uv` environment inside the OSWorld-V2 checkout.
+The experiment protocol (same-model paired arms, run order, verdict method) is in [`.claude/docs/experiments.md`](.claude/docs/experiments.md).
 
 ## Running GraphPC
 
@@ -99,7 +99,7 @@ HOMEPAGE=http://127.0.0.1:4399
 ```
 
 On OSWorld 2.0, the keys go in the `.env` of the run host's OSWorld-V2 checkout, together with the cloud and evaluator
-settings the runbook lists.
+settings the [runbook](.claude/docs/benchmarks/osworld_v2.md#per-run-agent-steps) lists.
 
 **WebArena.** The scripts run from this repository, with the WebArena checkout as the working directory and the
 `WebArena` conda environment active. A dry run needs neither a checkout nor an API key.
